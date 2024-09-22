@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+      }
+      .number {
+        width: 300px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        border: 3px solid #555;
+        outline: none;
+        text-align: right;
+      }
+      .number:focus {
+        border-radius: 5px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var inputField = document.querySelector("input");
+        inputField.oninput = function () {
+          var removeChar = this.value.replace(/[^0-9\.]/g, ""); // This is to remove alphabets and special characters.
+          // console.log(removeChar);
+          var removeDot = removeChar.replace(/\./g, ""); // This is to remove "DOT"
+          this.value = removeDot;
+
+          var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          // console.log(formatedNumber);
+          this.value = formatedNumber;
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" class="number" />
+  </body>
+</html>
