@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      ::before,
+      ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --clr-bg: #efefef;
+        --clr-primary: #0f172a;
+        --easing: cubic-bezier(0.47, 1.64, 0.41, 0.8);
+      }
+      /* reset button */
+      input,
+      button {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        text-decoration: none;
+        text-transform: none;
+        line-height: normal;
+        overflow: visible;
+      }
+      body {
+        margin: 0;
+        padding: 2rem;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        color: #ffffff30;
+        background: var(--clr-primary);
+        font-family: poppins, sans-serif;
+      }
+      .buttons {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #00000050;
+        border: 1px solid #ffffff30;
+        padding: 2rem;
+        backdrop-filter: blur(12px);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        justify-content: center;
+        gap: 1.5rem;
+        position: relative;
+      }
+      .buttons::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #00000020;
+        z-index: -1;
+        border-radius: inherit;
+        transition: inset 500ms ease-in-out;
+      }
+      /* .buttons:hover::before {
+        inset: -2rem;
+        transition-timing-function: cubic-bezier(0.47, 1.64, 0.41, 0.8);
+      } */
+      .buttons button {
+        background-color: #00000050;
+        border: 1px solid #ffffff30;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 5px;
+        outline: none;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+        position: relative;
+        isolation: isolate;
+        color: #ffffff90;
+      }
+
+      .buttons button svg {
+        width: 1.8rem;
+      }
+      .buttons button p {
+        position: absolute;
+        width: 100%;
+        font-size: 0.8rem;
+        /* opacity: 0; */
+        left: 0;
+        bottom: 0.5rem;
+        padding: 0.3rem;
+        text-align: center;
+        /* transition: all 100ms linear; */
+        outline: none;
+        /* translate: 0 10px; */
+      }
+      /* .buttons button:hover p {
+        opacity: 1;
+        translate: 0;
+        transition: all 100ms linear;
+      } */
+
+      .buttons button:focus-visible,
+      .buttons button:hover {
+        transform: scale(1.15);
+        z-index: 10;
+        color: #fff;
+        background-color: rgba(var(--bg), 0.5);
+      }
+      .buttons:has(button:focus-visible) button:not(:focus-visible),
+      .buttons:has(button:hover) button:not(:hover) {
+        opacity: 50%;
+        scale: 85%;
+        z-index: -10;
+      }
+
+      /* 애니메이션 속도 */
+      @media (prefers-reduced-motion: no-preference) {
+        :root {
+          --d: 100ms;
+          --ani-speed: 300ms;
+        }
+        [scale-up] {
+          scale: 0;
+          animation: scale-up var(--ani-speed) forwards;
+          animation-delay: calc(var(--order, 0ms) * var(--d));
+        }
+      }
+
+      @keyframes scale-up {
+        0% {
+          scale: 0;
+        }
+
+        60% {
+          scale: 1.15;
+        }
+
+        100% {
+          scale: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <!-- Furniture -->
+      <div scale-up style="--order: 1; --bg: 220, 38, 38">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-sofa"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M4 11a2 2 0 0 1 2 2v1h12v-1a2 2 0 1 1 4 0v5a1 1 0 0 1 -1 1h-18a1 1 0 0 1 -1 -1v-5a2 2 0 0 1 2 -2z"
+            />
+            <path d="M4 11v-3a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v3" />
+            <path d="M12 5v9" />
+          </svg>
+          <p>Furniture</p>
+        </button>
+      </div>
+
+      <!-- Propoerty -->
+      <div scale-up style="--order: 2; --bg: 124, 58, 237">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-home"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+          </svg>
+          <p>Property</p>
+        </button>
+      </div>
+
+      <!--  Job -->
+      <div scale-up style="--order: 3; --bg: 29, 78, 216">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-building"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 21l18 0" />
+            <path d="M9 8l1 0" />
+            <path d="M9 12l1 0" />
+            <path d="M9 16l1 0" />
+            <path d="M14 8l1 0" />
+            <path d="M14 12l1 0" />
+            <path d="M14 16l1 0" />
+            <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+          </svg>
+          <p>Job</p>
+        </button>
+      </div>
+
+      <!-- Travel -->
+      <div scale-up style="--order: 4; --bg: 21, 128, 61">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-plane"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z"
+            />
+          </svg>
+          <p>Travel</p>
+        </button>
+      </div>
+
+      <!-- Boat -->
+      <div scale-up style="--order: 5; --bg: 77, 124, 15">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-speedboat"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 17h13.4a3 3 0 0 0 2.5 -1.34l3.1 -4.66h0h-6.23a4 4 0 0 0 -1.49 .29l-3.56 1.42a4 4 0 0 1 -1.49 .29h-3.73h0h-1l-1.5 4z"
+            />
+            <path d="M6 13l1.5 -5" />
+            <path d="M6 8h8l2 3" />
+          </svg>
+
+          <p>Boat</p>
+        </button>
+      </div>
+      <!-- MC -->
+      <div scale-up style="--order: 6; --bg: 192, 38, 211">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-motorbike"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M19 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M7.5 14h5l4 -4h-10.5m1.5 4l4 -4" />
+            <path d="M13 6h2l1.5 3l2 4" />
+          </svg>
+          <p>MC</p>
+        </button>
+      </div>
+
+      <!-- Economy -->
+      <div scale-up style="--order: 7; --bg: 217, 119, 6">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-cash"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M7 9m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M14 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            <path
+              d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2"
+            />
+          </svg>
+          <p>Economy</p>
+        </button>
+      </div>
+
+      <!-- Holiday -->
+      <div scale-up style="--order: 8; --bg: 162, 28, 175">
+        <button type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-tabler-luggage"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M6 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M9 6v-1a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1" />
+            <path d="M6 10h12" />
+            <path d="M6 16h12" />
+            <path d="M9 20v1" />
+            <path d="M15 20v1" />
+          </svg>
+          <p>Holiday</p>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
