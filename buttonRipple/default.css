@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #02040c;
+  font-family: "Cabinet Grotesk", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+button {
+  --button-bg: blue;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  background: var(--button-bg);
+  color: var(--button-fg, inherit);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  button {
+    --_percentage: calc(100% / var(--ripples, 1));
+    --ripple-speed: 2s;
+    background: linear-gradient(var(--button-bg), var(--button-bg)) padding-box,
+      repeating-conic-gradient(
+          from var(--gradient-angle),
+          transparent,
+          var(--button-bg) calc(var(--_percentage) * 0.5),
+          transparent var(--_percentage)
+        )
+        border-box;
+    animation: var(--ripple-speed) ripple linear infinite;
+  }
+
+  button::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    width: 150%;
+    aspect-ratio: 1;
+    background: linear-gradient(
+      transparent,
+      hsla(0 0% 100% / 0.1),
+      transparent
+    );
+    animation: calc((var(--ripple-speed) * 3) / var(--ripples)) shimmer linear
+      infinite;
+    pointer-events: none;
+  }
+
+  @keyframes ripple {
+    to {
+      --gradient-angle: 360deg;
+    }
+  }
+
+  @keyframes shimmer {
+    to {
+      rotate: 360deg;
+    }
+  }
+}
