@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* mBrand */
+      .mBrand {
+        width: 100%;
+        overflow: hidden;
+        margin: 32px 0 0;
+      }
+      .mBrand .list {
+        display: flex;
+        animation: horizontalscroll 10s linear infinite;
+      }
+      .mBrand .list li {
+        flex: none;
+        padding: 0 28px;
+        list-style: none;
+      }
+      @keyframes horizontalscroll {
+        0% {
+          transform: translateX(1000px); /* 생기는 위치 */
+        }
+        100% {
+          transform: translateX(-1000px); /* 사라지는 위치 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mBrand">
+      <ul class="list">
+        <li>
+          <img
+            src="//img.cafe24.com/img/transfer/img/main/img_brand.png"
+            class="RWIB RTIB"
+            alt="brand"
+          />
+        </li>
+        <li>
+          <img
+            src="//img.cafe24.com/img/transfer/img/main/img_brand2.png"
+            class="RWIB RTIB"
+            alt="brand"
+          />
+        </li>
+        <li>
+          <img
+            src="//img.cafe24.com/img/transfer/img/main/img_brand3.png"
+            class="RWIB RTIB"
+            alt="brand"
+          />
+        </li>
+        <li>
+          <img
+            src="//img.cafe24.com/img/transfer/img/main/img_brand4.png"
+            class="RWIB RTIB"
+            alt="brand"
+          />
+        </li>
+        <li>
+          <img
+            src="//img.cafe24.com/img/transfer/img/main/img_brand5.png"
+            class="RWIB RTIB"
+            alt="brand"
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
