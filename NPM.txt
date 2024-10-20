@@ -1,22 +1,24 @@
 https://www.npmjs.com/package/axios
-https://www.npmjs.com/package/zustand
-https://www.npmjs.com/package/react-query
+https://www.npmjs.com/package/zustand // 전역상태 관리
+https://www.npmjs.com/package/react-query // useQuery
 
 https://www.npmjs.com/package/recharts
 https://www.npmjs.com/package/apexcharts
-https://www.npmjs.com/package/react-move
+https://www.npmjs.com/package/react-move // 차트 외 유용한 기능 제공
 
-https://www.npmjs.com/package/react-draggable
-https://www.npmjs.com/package/sortablejs
+https://www.npmjs.com/package/react-draggable // 자유로운 드래그
+https://www.npmjs.com/package/sortablejs  
 https://www.npmjs.com/package/react-dnd
-https://www.npmjs.com/package/react-moveable
+https://www.npmjs.com/package/react-moveable // 재밌는 기능
 
-https://www.npmjs.com/package/@lexical/react
-https://www.npmjs.com/package/draft-js
+https://www.npmjs.com/package/@lexical/react // 편집기
+https://www.npmjs.com/package/draft-js // 용량 큼
 
-https://www.npmjs.com/package/dayjs
+https://www.npmjs.com/package/dayjs // 시간+날짜 편집기
 
-https://www.npmjs.com/package/antd
-https://www.npmjs.com/package/@mui/material
+https://www.npmjs.com/package/zod // validation으로 유용함
+
+https://www.npmjs.com/package/antd // 용량 존나커서 필요한 것만 가져와 쓰기
+https://www.npmjs.com/package/@mui/material // 이슈가 좀 많음
 https://www.npmjs.com/package/daisyui
 https://www.npmjs.com/package/@chakra-ui/react
