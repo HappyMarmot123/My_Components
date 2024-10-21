@@ -34,3 +34,14 @@ https://www.npmjs.com/package/@chakra-ui/react
 components는 index.js 
 파일을 만들고 모든 컴포넌트를 export 선언하기
 캡슐화를 지양한다.
+
+
+https://jsonformatter.org/json-pretty-print
+https://developer.mozilla.org/ko/docs/Web
+https://themewagon.com/theme-category/admin-dashboard/
+https://mvnrepository.com/artifact/org.springframework.data
+https://freefrontend.com/css-scroll-effects/
+https://codepen.io/trending
+https://npmtrends.com/dayjs-vs-moment
+https://news.hada.io/
+https://ykss.netlify.app/translation/react_libraries_for_2024/?utm_source=substack&utm_medium=email#%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%A7%A4%EB%8B%88%EC%A0%80
