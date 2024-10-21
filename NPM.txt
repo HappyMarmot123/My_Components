@@ -22,3 +22,15 @@ https://www.npmjs.com/package/antd // 용량 존나커서 필요한 것만 가�
 https://www.npmjs.com/package/@mui/material // 이슈가 좀 많음
 https://www.npmjs.com/package/daisyui
 https://www.npmjs.com/package/@chakra-ui/react
+
+
+
+[app] 전역설정
+[pages] 페이지
+[layout] 컴포넌트 묶은거
+[components]
+[shared] 타입 유틸 이미지 등
+
+components는 index.js 
+파일을 만들고 모든 컴포넌트를 export 선언하기
+캡슐화를 지양한다.
