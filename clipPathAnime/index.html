@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      :root {
+        --dark-color: #191f1d;
+        --shadow: #0005;
+        --circle-rainbow: radial-gradient(
+          circle at left top,
+          #ede6bf,
+          #ecc947,
+          #cb5a31,
+          #6f5d79,
+          #4e779a
+        );
+      }
       .box {
         clip-path: circle(75%);
         transition: clip-path 1s;
@@ -46,6 +58,23 @@
       .fofofofoter:hover > .aaaaaaaaaa {
         opacity: 1;
       }
+
+      .sphere {
+        display: grid;
+        height: 200px;
+        width: 200px;
+        background-image: var(--circle-rainbow);
+        border: 3px solid var(--dark-color);
+        border-radius: 50%;
+        transition: all 0.4s;
+        box-shadow: 0px 0px var(--shadow);
+      }
+
+      .sphere:hover {
+        scale: 1.1;
+        box-shadow: 16px 16px var(--shadow);
+        transition: all 0.2s;
+      }
     </style>
   </head>
   <body>
@@ -75,5 +104,6 @@
         ><span class="ScreenReaderText-module_root-jASUi">Love</span></a
       >
     </footer>
+    <div class="sphere"></div>
   </body>
 </html>
