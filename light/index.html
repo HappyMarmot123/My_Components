@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background: black;
+        padding-top: 20vh;
+    }
+        .jqCWKh {
+    --glow-color: hsl(180deg 50% 70%);
+    top: 24%;
+    left: 26%;
+}
+.ceiBkC {
+    --size: 20%;
+    position: absolute;
+    z-index: -1;
+    width: var(--size);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+}
+.bRpWeh {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: blur(45px);
+    border-radius: 50%;
+    background: var(--glow-color);
+    transition: opacity cubic-bezier(0, 0.83, 0.61, 0.99);
+}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let isLightOn = true;
+
+            const lightBtn = document.querySelector('.bRpWeh') 
+            lightBtn.addEventListener('click', () => {
+                isLightOn = !isLightOn;
+                isLightOn ? lightBtn.style.opacity = 1 : lightBtn.style.opacity = 0 
+            })
+        });
+    </script>
+</head>
+<body>
+    <button class="sc-65a86e64-3 sc-65a86e64-4 ceiBkC jqCWKh">
+        <span style="transition-duration: 500ms;" class="sc-65a86e64-7 bRpWeh"></span>
+    </button>
+    <picture><img src="https://www.joyofreact.com/images/mascot-100.png" style="opacity:1;transition-duration:0ms;mix-blend-mode:normal" class="sc-65a86e64-2 iATBeS"></picture>
+</body> 
+</html>
