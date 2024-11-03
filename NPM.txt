@@ -10,6 +10,8 @@ https://www.npmjs.com/package/react-draggable // 자유로운 드래그
 https://www.npmjs.com/package/sortablejs  
 https://www.npmjs.com/package/react-dnd
 https://www.npmjs.com/package/react-moveable // 재밌는 기능
+https://www.npmjs.com/package/react-fast-marquee // 전광판 슬라이드쇼
+
 
 https://www.npmjs.com/package/@lexical/react // 편집기
 https://www.npmjs.com/package/draft-js // 용량 큼
