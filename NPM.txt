@@ -25,9 +25,9 @@ https://www.npmjs.com/package/@mui/material // 이슈가 좀 많음
 https://www.npmjs.com/package/daisyui
 https://www.npmjs.com/package/@chakra-ui/react
 
-https://www.npmjs.com/package/framer-motion // trendy
-https://www.npmjs.com/package/gsap    // Old guy, no much issue
-https://www.npmjs.com/package/lenis   // 300KB
+https://www.npmjs.com/package/framer-motion // trendy, much of anime
+https://www.npmjs.com/package/gsap    // Old guy, no much issue, powerful scroll animation
+https://www.npmjs.com/package/lenis   // 300KB, extensions of gsap and framer-motion
 
 
 [app] 전역설정
