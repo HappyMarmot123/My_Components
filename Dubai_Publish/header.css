@@ -1,0 +1,230 @@
+/* lenis */
+:root {
+  --secondary: #f4f4f4;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* welcome split */
+.intro {
+  background: black;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  background: rgb(97, 105, 109);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  color: rgb(233, 233, 233);
+  font-family: "Heebo", sans-serif;
+  font-size: 3rem;
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  font-size: 10rem;
+  display: inline-block;
+}
+/* others... */
+h3 {
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+p,
+li,
+span {
+  font-size: 2.4rem;
+}
+.iBIfH {
+  left: 10%;
+  top: 20%;
+  position: absolute;
+  display: block;
+  font-style: normal;
+  font-size: 10rem;
+  font-weight: 600;
+  background-size: 100%;
+  background-image: linear-gradient(
+    75deg,
+    rgb(255, 245, 0) 0%,
+    rgb(255, 250, 50) 5%,
+    rgb(255, 255, 100) 10%,
+    rgb(255, 255, 150) 20%,
+    rgb(255, 255, 200) 30%,
+    rgb(255, 250, 230) 40%,
+    rgb(255, 245, 220) 50%,
+    rgb(255, 240, 210) 60%,
+    rgb(255, 235, 200) 70%,
+    rgb(255, 230, 190) 80%,
+    rgb(255, 220, 180) 90%,
+    rgb(255, 210, 160) 95%,
+    rgb(255, 200, 140) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.header_wrapper {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  padding: 6rem;
+}
+.nav_item:nth-child(1) {
+  width: fit-content;
+}
+.nav_item:nth-child(2) {
+  grid-area: 1/4/2/5;
+  display: inline-flex;
+  width: fit-content;
+  justify-self: end;
+  gap: 10rem;
+}
+.nav > span {
+  display: block;
+}
+.side_background_wrapper {
+  height: 90vh;
+  text-align: center;
+  padding-top: 20vh;
+  top: 0;
+  position: sticky;
+}
+.hero {
+  position: relative;
+  width: 100%;
+}
+.hero_wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 90vh;
+}
+.hero_paragraph {
+  width: 50%;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+.hero_paragraph_text,
+.hero_paragraph_text span {
+  font-size: 8rem;
+  line-height: 1.2;
+}
+.hero_paragraph::before {
+  content: "Info";
+  border: 1px solid var(--secondary);
+  border-radius: 20rem;
+  padding: 0.4rem 2.2rem;
+  margin-right: 1.6rem;
+  font-size: 4rem;
+}
+.hero_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.hero_background_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_item > li {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav_item > li::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.nav_item > li:hover::before {
+  width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero_paragraph::before {
+    content: "";
+    border: none;
+  }
+  .hero_paragraph_text,
+  .hero_paragraph_text span {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(206 245 223 / 15%),
+    rgb(164 209 198 / 22%),
+    rgb(128 173 172 / 25%),
+    rgb(72 161 170 / 23%)
+  );
+  list-style: none;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 40px;
+  transition: all 0.2s ease-in-out;
+}
+.overlay:hover {
+  opacity: 1;
+  cursor: default;
+} */
