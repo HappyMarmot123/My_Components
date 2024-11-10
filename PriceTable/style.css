@@ -1,0 +1,262 @@
+/*! CSS Used from: https://bestjquery.com/tutorial/css/bootstrap-grid.min.css */
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+h1,
+h3 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h1,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+.text-center {
+  text-align: center;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-md-4,
+.col-sm-6 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .col-sm-6 {
+    float: left;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-4 {
+    float: left;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+}
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.row:after {
+  clear: both;
+}
+/*! CSS Used from: https://bestjquery.com/tutorial/css/common-1.css */
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.demo {
+  padding: 20px 0 30px;
+  background: #fff;
+}
+h1.white {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  h1.white {
+    font-size: 18px;
+  }
+}
+/*! CSS Used from: https://bestjquery.com/tutorial/pricing-table/demo117/css/style.css */
+.demo {
+  background: #e7e7e7;
+}
+.pricingTable {
+  background: linear-gradient(to bottom, transparent 24%, #fff 25%);
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  padding: 0 0 40px;
+  margin: 0 15px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 93%, 0% 100%);
+}
+.pricingTable .pricingTable-header {
+  color: #fff;
+  padding: 45px 15px 35px;
+  position: relative;
+}
+/* TODO: 상단 Standard */
+.pricingTable .pricingTable-header:before,
+.pricingTable .pricingTable-header:after {
+  content: "";
+  background: #36474f;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  -webkit-clip-path: polygon(100% 20%, 100% 100%, 50% 90%, 0 100%, 0 0);
+  clip-path: polygon(100% 20%, 100% 100%, 50% 90%, 0 100%, 0 0);
+}
+
+/* TODO: 상 우 하 좌    인자값: (하, 상) */
+/* 인자값 상:  0 맨 위,  100% 맨 아래 */
+/* 인자값 하:  0 왼쪽,  100% 오른쪽 */
+.pricingTable .pricingTable-header:after {
+  background: #35c2ff;
+  height: 95%;
+  z-index: -1;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 20%);
+  clip-path: polygon(100% 0, 100% 100%, 50% 90%, 0 100%, 0 20%);
+}
+/* TODO: 상단 Standard */
+.pricingTable .title {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+.pricingTable .currency {
+  font-size: 60px;
+  line-height: 60px;
+}
+.pricingTable .amount {
+  font-size: 60px;
+  line-height: 70px;
+}
+.pricingTable .amount-sm {
+  font-size: 22px;
+  line-height: 35px;
+  vertical-align: top;
+}
+.pricingTable .pricing-content {
+  padding: 10px 0;
+  margin: 0 30px;
+  list-style: none;
+}
+.pricingTable .pricing-content li {
+  color: #505050;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+.pricingTable .pricing-content li:last-child {
+  border-bottom: none;
+}
+/* signup 버튼 */
+.pricingTable .pricingTable-signup {
+  color: #35c2ff;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 2px solid #35c2ff;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+}
+.pricingTable .pricingTable-signup:hover {
+  color: #fff;
+}
+.pricingTable .pricingTable-signup:before {
+  content: "";
+  background-color: #35c2ff;
+  height: 150px;
+  width: 220px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: -15px;
+  z-index: -1;
+  transition: all 0.7s ease 0s;
+}
+.pricingTable .pricingTable-signup:hover:before {
+  bottom: -50px;
+}
+@media only screen and (max-width: 990px) {
+  .pricingTable {
+    margin: 0 0 30px;
+  }
+}
