@@ -30,6 +30,8 @@ https://www.npmjs.com/package/@chakra-ui/react
 https://www.npmjs.com/package/framer-motion // trendy, much of anime
 https://www.npmjs.com/package/gsap    // Old guy, no much issue, powerful scroll animation
 https://www.npmjs.com/package/lenis   // 300KB, extensions of gsap and framer-motion
+https://www.npmjs.com/package/animate.css // 200kb 이슈 적은 애니메이션 라이브러리 (offcial doc: https://animate.style/)
+https://www.npmjs.com/package/animejs // 이슈는 좀 있으나 100kb의 사용법도 쉬운 애니메이션 라이브러리
 
 
 [app] 전역설정
@@ -58,36 +60,17 @@ https://inpa.tistory.com/entry/%F0%9F%8C%90-requestAnimationFrame-%EA%B0%80%EC%9
 http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 
 
+delete line	ctrl d
+expand line 	ctrl shift d
+add selection to next find match 	ctrl n
+select all occurrences	ctrl shft n
+BookMark		ctrl alt  j,k,l
+New Window  ctrl m
+컴포넌트 혹은 한줄 cursor   ctrl k
+AI 채팅      ctrl shift l
+AI 코드핵     ctrl shift k
 
 
 
-// 리액트에서 사용법
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger);
-
-let ref = useRef(null);
-
-useEffect(
-  const el = ref.current;
-  gsap.to(el, ....)
-)
-
-<div ref={ref} />
-
-
-
-<header>
-<container>
-<section>
-  <article />
-</section>
-<section></section>
-</container>
-<footer>
-
-
-
-
-
-VSCode 확장팩 골라서 사용하기
-Frontend Essentials Extension Pack (FPack)  
+스니팻은 스코프 재데로 설정 안하면 검색 못함
+"scope": "javascript, javascriptreact typescript, typescriptreact",
