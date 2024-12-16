@@ -64,11 +64,29 @@ delete line	ctrl d
 expand line 	ctrl shift d
 add selection to next find match 	ctrl n
 select all occurrences	ctrl shft n
-BookMark		ctrl alt  j,k,l
+BookMark (Jumb to..., Toggle)		ctrl alt  j,k,l
 New Window  ctrl m
 컴포넌트 혹은 한줄 cursor   ctrl k
 AI 채팅      ctrl shift l
 AI 코드핵     ctrl shift k
+
+cursor
+aichat - 클로드 쏘넷 3.5 추천
+o1mini - 복잡한 에러 해결에 추천 (long context와 함께 하면 더욱 좋다)
+@codebase 질문
+- 프로젝트의 모든 파일을 서칭 후 질문과 가장 유사한 순위를 매긴다
+터미널 오류를 커서에게 물어볼수 있다. (recommand chat)
+@Docs
+
+익스텐션 REST client 사용법
+https://jsonplaceholder.typicode.com/todos
+Content-Type: application/json
+
+{
+  "userId": 100,
+  "title": "Test",
+  "completed": false
+}
 
 
 
